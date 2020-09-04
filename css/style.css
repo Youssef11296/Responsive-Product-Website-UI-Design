@@ -2,7 +2,8 @@
 :root {
     --pink-color: #c36cbb;
     --links-color: #5f5f79;
-    --h1-gradient: #494964;
+    --h1-gradient-one: #494964;
+    --h1-gradient-two: #6f6f89;
     --p-color: #585772;
     --light-color: #fff;
 }
@@ -110,6 +111,9 @@ main .main-container {
 
 .presentation .intro-text h1 {
     font-size: 2.4em;
+    background: linear-gradient(to right, var(--h1-gradient-one), var(--h1-gradient-two));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .presentation .intro-text p {
