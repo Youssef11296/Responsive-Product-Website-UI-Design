@@ -1,0 +1,254 @@
+/* Vars */
+:root {
+    --pink-color: #c36cbb;
+    --links-color: #5f5f79;
+    --h1-gradient: #494964;
+    --p-color: #585772;
+    --light-color: #fff;
+}
+
+/* Globlal */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    padding: 2rem 4rem;
+    margin: auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    display: flex;
+}
+
+header>* {
+    display: flex;
+}
+
+header .logo {
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logo .logo-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+header nav {
+    flex: 2;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--links-color);
+    text-decoration: none;
+    transition: .5s;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    color: var(--pink-color);
+}
+
+header .icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .icon .bar {
+    width: 30px;
+    height: 2px;
+    margin: 3px;
+    background-color: #000;
+}
+
+header .cart {
+    flex: 1;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    height: 80vh;
+}
+
+main .main-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentation .intro-text h1 {
+    font-size: 2.4em;
+}
+
+.presentation .intro-text p {
+    color: var(--p-color);
+    font-size: 1.2rem;
+    margin: 1.2rem 0 2rem;
+}
+
+.presentation .intro-text .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    width: 200px;
+    color: var(--pink-color);
+    border: 1px solid var(--pink-color);
+    outline: none;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.presentation .intro-text .btn-link-select:hover {
+    background-color: var(--pink-color);
+    color: var(--light-color);
+}
+
+.presentation .intro-text .btn-link-add {
+    background-color: var(--pink-color);
+    color: var(--light-color);
+    margin-left: 1.2rem;
+}
+
+.presentation .intro-text .btn-link-add:hover {
+    background-color: transparent;
+    color: var(--pink-color);
+}
+
+
+main .main-container .laptop-img {
+    max-width: 600px;
+}
+
+.laptop-img img {
+    filter: drop-shadow(0 5px 3px #000);
+    animation: drop 1.5s ease;
+}
+
+/* Circles */
+.arrows img {
+    cursor: pointer;
+}
+
+.big-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80%;
+    z-index: -1;
+    opacity: .5;
+}
+
+.mid-img {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    height: 60%;
+    z-index: -1;
+    opacity: .4;
+}
+
+.small-img {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    z-index: -1;
+    opacity: .4;
+}
+
+/* Pagination Btns */
+.arrows {
+    position: absolute;
+    right: 4rem;
+    bottom: 10%;
+    width: 240px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Animation */
+@keyframes drop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Quiries */
+@media screen and (max-width:1024px) {
+    header nav {
+        display: none;
+    }
+
+    header .icon {
+        display: flex;
+    }
+
+    header .cart {
+        flex: 0;
+    }
+
+    main .main-container {
+        flex-direction: column;
+    }
+
+    main .main-container .intro-text {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    main .main-container .intro-text h1 {
+        font-size: 2em;
+    }
+
+    main .main-container .laptop-img {
+        max-width: 440px;
+    }
+
+    .big-img,
+    .mid-img,
+    .small-img {
+        opacity: .2;
+    }
+
+    .arrows {
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
